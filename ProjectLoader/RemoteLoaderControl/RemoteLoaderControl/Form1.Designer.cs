@@ -52,8 +52,8 @@
             this.label_info_state_ECU_connected = new System.Windows.Forms.Label();
             this.pictureBox_state_ECU_connected = new System.Windows.Forms.PictureBox();
             this.panel_central = new System.Windows.Forms.Panel();
-            this.label_info_interval_packet = new System.Windows.Forms.Label();
-            this.numericUpDown_interval_packet = new System.Windows.Forms.NumericUpDown();
+            this.label_info_interval_packet_transmit = new System.Windows.Forms.Label();
+            this.numericUpDown_interval_packet_transmit = new System.Windows.Forms.NumericUpDown();
             this.pictureBox_hydraulic_oil_temp_level = new System.Windows.Forms.PictureBox();
             this.pictureBox_rpm_meter = new System.Windows.Forms.PictureBox();
             this.pictureBox_cooltant_temp_level = new System.Windows.Forms.PictureBox();
@@ -61,6 +61,26 @@
             this.pictureBox_joystick_position_left = new System.Windows.Forms.PictureBox();
             this.pictureBox_joystick_position_right = new System.Windows.Forms.PictureBox();
             this.checkBox_cmd_microphone = new System.Windows.Forms.CheckBox();
+            this.button_cmd_start_engine = new System.Windows.Forms.Button();
+            this.button_cmd_stop_engine = new System.Windows.Forms.Button();
+            this.checkBox_cmd_ignition = new System.Windows.Forms.CheckBox();
+            this.checkBox_cmd_brake_parking = new System.Windows.Forms.CheckBox();
+            this.button_cmd_brake = new System.Windows.Forms.Button();
+            this.button_cmd_horn = new System.Windows.Forms.Button();
+            this.checkBox_cmd_hazard_light = new System.Windows.Forms.CheckBox();
+            this.button_cmd_left_turn_signal = new System.Windows.Forms.Button();
+            this.button_cmd_right_turn_signal = new System.Windows.Forms.Button();
+            this.checkBox_cmd_head_light = new System.Windows.Forms.CheckBox();
+            this.checkBox_cmd_rear_light = new System.Windows.Forms.CheckBox();
+            this.checkBox_cmd_wipers = new System.Windows.Forms.CheckBox();
+            this.label_info_interval_packet_recive = new System.Windows.Forms.Label();
+            this.numericUpDown_interval_packet_recive = new System.Windows.Forms.NumericUpDown();
+            this.label_info_interval_update_panel = new System.Windows.Forms.Label();
+            this.numericUpDown_interval_update_panel = new System.Windows.Forms.NumericUpDown();
+            this.label_info_interval_req_telemetry = new System.Windows.Forms.Label();
+            this.numericUpDown_interval_req_telemetry = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_perm_transmit_joystick_values = new System.Windows.Forms.CheckBox();
+            this.textBox_telemetry_data = new System.Windows.Forms.TextBox();
             this.groupBox_connection_tcp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_tcp_server_port)).BeginInit();
             this.groupBox_connection_reserve.SuspendLayout();
@@ -72,13 +92,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_state_controller_connected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_state_ECU_connected)).BeginInit();
             this.panel_central.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet_transmit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hydraulic_oil_temp_level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_rpm_meter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cooltant_temp_level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fuel_level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_joystick_position_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_joystick_position_right)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet_recive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_update_panel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_req_telemetry)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_tcp_server_ip
@@ -294,9 +317,29 @@
             // 
             // panel_central
             // 
+            this.panel_central.Controls.Add(this.textBox_telemetry_data);
+            this.panel_central.Controls.Add(this.checkBox_perm_transmit_joystick_values);
+            this.panel_central.Controls.Add(this.label_info_interval_req_telemetry);
+            this.panel_central.Controls.Add(this.numericUpDown_interval_req_telemetry);
+            this.panel_central.Controls.Add(this.label_info_interval_update_panel);
+            this.panel_central.Controls.Add(this.numericUpDown_interval_update_panel);
+            this.panel_central.Controls.Add(this.label_info_interval_packet_recive);
+            this.panel_central.Controls.Add(this.numericUpDown_interval_packet_recive);
+            this.panel_central.Controls.Add(this.checkBox_cmd_wipers);
+            this.panel_central.Controls.Add(this.checkBox_cmd_rear_light);
+            this.panel_central.Controls.Add(this.checkBox_cmd_head_light);
+            this.panel_central.Controls.Add(this.button_cmd_right_turn_signal);
+            this.panel_central.Controls.Add(this.button_cmd_left_turn_signal);
+            this.panel_central.Controls.Add(this.checkBox_cmd_hazard_light);
+            this.panel_central.Controls.Add(this.button_cmd_horn);
+            this.panel_central.Controls.Add(this.button_cmd_brake);
+            this.panel_central.Controls.Add(this.checkBox_cmd_brake_parking);
+            this.panel_central.Controls.Add(this.checkBox_cmd_ignition);
+            this.panel_central.Controls.Add(this.button_cmd_stop_engine);
+            this.panel_central.Controls.Add(this.button_cmd_start_engine);
             this.panel_central.Controls.Add(this.checkBox_cmd_microphone);
-            this.panel_central.Controls.Add(this.label_info_interval_packet);
-            this.panel_central.Controls.Add(this.numericUpDown_interval_packet);
+            this.panel_central.Controls.Add(this.label_info_interval_packet_transmit);
+            this.panel_central.Controls.Add(this.numericUpDown_interval_packet_transmit);
             this.panel_central.Controls.Add(this.pictureBox_hydraulic_oil_temp_level);
             this.panel_central.Controls.Add(this.pictureBox_rpm_meter);
             this.panel_central.Controls.Add(this.pictureBox_cooltant_temp_level);
@@ -312,21 +355,21 @@
             this.panel_central.Size = new System.Drawing.Size(1299, 526);
             this.panel_central.TabIndex = 8;
             // 
-            // label_info_interval_packet
+            // label_info_interval_packet_transmit
             // 
-            this.label_info_interval_packet.AutoSize = true;
-            this.label_info_interval_packet.Location = new System.Drawing.Point(1045, 505);
-            this.label_info_interval_packet.Name = "label_info_interval_packet";
-            this.label_info_interval_packet.Size = new System.Drawing.Size(173, 13);
-            this.label_info_interval_packet.TabIndex = 18;
-            this.label_info_interval_packet.Text = "Интервал передачи пакетов, мс:";
+            this.label_info_interval_packet_transmit.AutoSize = true;
+            this.label_info_interval_packet_transmit.Location = new System.Drawing.Point(1045, 505);
+            this.label_info_interval_packet_transmit.Name = "label_info_interval_packet_transmit";
+            this.label_info_interval_packet_transmit.Size = new System.Drawing.Size(173, 13);
+            this.label_info_interval_packet_transmit.TabIndex = 18;
+            this.label_info_interval_packet_transmit.Text = "Интервал передачи пакетов, мс:";
             // 
-            // numericUpDown_interval_packet
+            // numericUpDown_interval_packet_transmit
             // 
-            this.numericUpDown_interval_packet.Location = new System.Drawing.Point(1224, 503);
-            this.numericUpDown_interval_packet.Name = "numericUpDown_interval_packet";
-            this.numericUpDown_interval_packet.Size = new System.Drawing.Size(72, 20);
-            this.numericUpDown_interval_packet.TabIndex = 17;
+            this.numericUpDown_interval_packet_transmit.Location = new System.Drawing.Point(1224, 503);
+            this.numericUpDown_interval_packet_transmit.Name = "numericUpDown_interval_packet_transmit";
+            this.numericUpDown_interval_packet_transmit.Size = new System.Drawing.Size(72, 20);
+            this.numericUpDown_interval_packet_transmit.TabIndex = 17;
             // 
             // pictureBox_hydraulic_oil_temp_level
             // 
@@ -362,7 +405,7 @@
             // 
             // pictureBox_joystick_position_left
             // 
-            this.pictureBox_joystick_position_left.Location = new System.Drawing.Point(1110, 3);
+            this.pictureBox_joystick_position_left.Location = new System.Drawing.Point(553, 9);
             this.pictureBox_joystick_position_left.Name = "pictureBox_joystick_position_left";
             this.pictureBox_joystick_position_left.Size = new System.Drawing.Size(90, 90);
             this.pictureBox_joystick_position_left.TabIndex = 12;
@@ -370,7 +413,7 @@
             // 
             // pictureBox_joystick_position_right
             // 
-            this.pictureBox_joystick_position_right.Location = new System.Drawing.Point(1206, 3);
+            this.pictureBox_joystick_position_right.Location = new System.Drawing.Point(649, 9);
             this.pictureBox_joystick_position_right.Name = "pictureBox_joystick_position_right";
             this.pictureBox_joystick_position_right.Size = new System.Drawing.Size(90, 90);
             this.pictureBox_joystick_position_right.TabIndex = 11;
@@ -379,12 +422,192 @@
             // checkBox_cmd_microphone
             // 
             this.checkBox_cmd_microphone.AutoSize = true;
-            this.checkBox_cmd_microphone.Location = new System.Drawing.Point(186, 315);
+            this.checkBox_cmd_microphone.Location = new System.Drawing.Point(420, 287);
             this.checkBox_cmd_microphone.Name = "checkBox_cmd_microphone";
             this.checkBox_cmd_microphone.Size = new System.Drawing.Size(79, 17);
             this.checkBox_cmd_microphone.TabIndex = 19;
             this.checkBox_cmd_microphone.Text = "Микрофон";
             this.checkBox_cmd_microphone.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_start_engine
+            // 
+            this.button_cmd_start_engine.Location = new System.Drawing.Point(420, 333);
+            this.button_cmd_start_engine.Name = "button_cmd_start_engine";
+            this.button_cmd_start_engine.Size = new System.Drawing.Size(135, 23);
+            this.button_cmd_start_engine.TabIndex = 20;
+            this.button_cmd_start_engine.Text = "Запускать двигатель";
+            this.button_cmd_start_engine.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_stop_engine
+            // 
+            this.button_cmd_stop_engine.Location = new System.Drawing.Point(420, 362);
+            this.button_cmd_stop_engine.Name = "button_cmd_stop_engine";
+            this.button_cmd_stop_engine.Size = new System.Drawing.Size(135, 23);
+            this.button_cmd_stop_engine.TabIndex = 21;
+            this.button_cmd_stop_engine.Text = "Остановить двигатель";
+            this.button_cmd_stop_engine.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_ignition
+            // 
+            this.checkBox_cmd_ignition.AutoSize = true;
+            this.checkBox_cmd_ignition.Location = new System.Drawing.Point(420, 310);
+            this.checkBox_cmd_ignition.Name = "checkBox_cmd_ignition";
+            this.checkBox_cmd_ignition.Size = new System.Drawing.Size(82, 17);
+            this.checkBox_cmd_ignition.TabIndex = 22;
+            this.checkBox_cmd_ignition.Text = "Зажигание";
+            this.checkBox_cmd_ignition.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_brake_parking
+            // 
+            this.checkBox_cmd_brake_parking.AutoSize = true;
+            this.checkBox_cmd_brake_parking.Location = new System.Drawing.Point(420, 391);
+            this.checkBox_cmd_brake_parking.Name = "checkBox_cmd_brake_parking";
+            this.checkBox_cmd_brake_parking.Size = new System.Drawing.Size(127, 17);
+            this.checkBox_cmd_brake_parking.TabIndex = 23;
+            this.checkBox_cmd_brake_parking.Text = "Стояночный тормоз";
+            this.checkBox_cmd_brake_parking.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_brake
+            // 
+            this.button_cmd_brake.Location = new System.Drawing.Point(420, 414);
+            this.button_cmd_brake.Name = "button_cmd_brake";
+            this.button_cmd_brake.Size = new System.Drawing.Size(79, 23);
+            this.button_cmd_brake.TabIndex = 24;
+            this.button_cmd_brake.Text = "Тормоз";
+            this.button_cmd_brake.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_horn
+            // 
+            this.button_cmd_horn.Location = new System.Drawing.Point(420, 443);
+            this.button_cmd_horn.Name = "button_cmd_horn";
+            this.button_cmd_horn.Size = new System.Drawing.Size(79, 23);
+            this.button_cmd_horn.TabIndex = 25;
+            this.button_cmd_horn.Text = "Сигналка";
+            this.button_cmd_horn.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_hazard_light
+            // 
+            this.checkBox_cmd_hazard_light.AutoSize = true;
+            this.checkBox_cmd_hazard_light.Location = new System.Drawing.Point(658, 287);
+            this.checkBox_cmd_hazard_light.Name = "checkBox_cmd_hazard_light";
+            this.checkBox_cmd_hazard_light.Size = new System.Drawing.Size(135, 17);
+            this.checkBox_cmd_hazard_light.TabIndex = 26;
+            this.checkBox_cmd_hazard_light.Text = "Аварейный лампочка";
+            this.checkBox_cmd_hazard_light.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_left_turn_signal
+            // 
+            this.button_cmd_left_turn_signal.Location = new System.Drawing.Point(658, 310);
+            this.button_cmd_left_turn_signal.Name = "button_cmd_left_turn_signal";
+            this.button_cmd_left_turn_signal.Size = new System.Drawing.Size(123, 23);
+            this.button_cmd_left_turn_signal.TabIndex = 27;
+            this.button_cmd_left_turn_signal.Text = "Поворотник налево";
+            this.button_cmd_left_turn_signal.UseVisualStyleBackColor = true;
+            // 
+            // button_cmd_right_turn_signal
+            // 
+            this.button_cmd_right_turn_signal.Location = new System.Drawing.Point(787, 310);
+            this.button_cmd_right_turn_signal.Name = "button_cmd_right_turn_signal";
+            this.button_cmd_right_turn_signal.Size = new System.Drawing.Size(123, 23);
+            this.button_cmd_right_turn_signal.TabIndex = 28;
+            this.button_cmd_right_turn_signal.Text = "Поворотник направо";
+            this.button_cmd_right_turn_signal.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_head_light
+            // 
+            this.checkBox_cmd_head_light.AutoSize = true;
+            this.checkBox_cmd_head_light.Location = new System.Drawing.Point(658, 339);
+            this.checkBox_cmd_head_light.Name = "checkBox_cmd_head_light";
+            this.checkBox_cmd_head_light.Size = new System.Drawing.Size(105, 17);
+            this.checkBox_cmd_head_light.TabIndex = 29;
+            this.checkBox_cmd_head_light.Text = "Передний фара";
+            this.checkBox_cmd_head_light.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_rear_light
+            // 
+            this.checkBox_cmd_rear_light.AutoSize = true;
+            this.checkBox_cmd_rear_light.Location = new System.Drawing.Point(658, 362);
+            this.checkBox_cmd_rear_light.Name = "checkBox_cmd_rear_light";
+            this.checkBox_cmd_rear_light.Size = new System.Drawing.Size(92, 17);
+            this.checkBox_cmd_rear_light.TabIndex = 30;
+            this.checkBox_cmd_rear_light.Text = "Задний фара";
+            this.checkBox_cmd_rear_light.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_cmd_wipers
+            // 
+            this.checkBox_cmd_wipers.AutoSize = true;
+            this.checkBox_cmd_wipers.Location = new System.Drawing.Point(658, 385);
+            this.checkBox_cmd_wipers.Name = "checkBox_cmd_wipers";
+            this.checkBox_cmd_wipers.Size = new System.Drawing.Size(77, 17);
+            this.checkBox_cmd_wipers.TabIndex = 31;
+            this.checkBox_cmd_wipers.Text = "Дворники";
+            this.checkBox_cmd_wipers.UseVisualStyleBackColor = true;
+            // 
+            // label_info_interval_packet_recive
+            // 
+            this.label_info_interval_packet_recive.AutoSize = true;
+            this.label_info_interval_packet_recive.Location = new System.Drawing.Point(1002, 481);
+            this.label_info_interval_packet_recive.Name = "label_info_interval_packet_recive";
+            this.label_info_interval_packet_recive.Size = new System.Drawing.Size(215, 13);
+            this.label_info_interval_packet_recive.TabIndex = 33;
+            this.label_info_interval_packet_recive.Text = "Интервал проверка приема пакетов, мс:";
+            // 
+            // numericUpDown_interval_packet_recive
+            // 
+            this.numericUpDown_interval_packet_recive.Location = new System.Drawing.Point(1224, 479);
+            this.numericUpDown_interval_packet_recive.Name = "numericUpDown_interval_packet_recive";
+            this.numericUpDown_interval_packet_recive.Size = new System.Drawing.Size(72, 20);
+            this.numericUpDown_interval_packet_recive.TabIndex = 32;
+            // 
+            // label_info_interval_update_panel
+            // 
+            this.label_info_interval_update_panel.AutoSize = true;
+            this.label_info_interval_update_panel.Location = new System.Drawing.Point(1036, 455);
+            this.label_info_interval_update_panel.Name = "label_info_interval_update_panel";
+            this.label_info_interval_update_panel.Size = new System.Drawing.Size(181, 13);
+            this.label_info_interval_update_panel.TabIndex = 35;
+            this.label_info_interval_update_panel.Text = "Интервал обновление панель, мс:";
+            // 
+            // numericUpDown_interval_update_panel
+            // 
+            this.numericUpDown_interval_update_panel.Location = new System.Drawing.Point(1224, 453);
+            this.numericUpDown_interval_update_panel.Name = "numericUpDown_interval_update_panel";
+            this.numericUpDown_interval_update_panel.Size = new System.Drawing.Size(72, 20);
+            this.numericUpDown_interval_update_panel.TabIndex = 34;
+            // 
+            // label_info_interval_req_telemetry
+            // 
+            this.label_info_interval_req_telemetry.AutoSize = true;
+            this.label_info_interval_req_telemetry.Location = new System.Drawing.Point(1037, 429);
+            this.label_info_interval_req_telemetry.Name = "label_info_interval_req_telemetry";
+            this.label_info_interval_req_telemetry.Size = new System.Drawing.Size(181, 13);
+            this.label_info_interval_req_telemetry.TabIndex = 37;
+            this.label_info_interval_req_telemetry.Text = "Интервал запрос телеметрий, мс:";
+            // 
+            // numericUpDown_interval_req_telemetry
+            // 
+            this.numericUpDown_interval_req_telemetry.Location = new System.Drawing.Point(1224, 427);
+            this.numericUpDown_interval_req_telemetry.Name = "numericUpDown_interval_req_telemetry";
+            this.numericUpDown_interval_req_telemetry.Size = new System.Drawing.Size(72, 20);
+            this.numericUpDown_interval_req_telemetry.TabIndex = 36;
+            // 
+            // checkBox_perm_transmit_joystick_values
+            // 
+            this.checkBox_perm_transmit_joystick_values.AutoSize = true;
+            this.checkBox_perm_transmit_joystick_values.Location = new System.Drawing.Point(658, 443);
+            this.checkBox_perm_transmit_joystick_values.Name = "checkBox_perm_transmit_joystick_values";
+            this.checkBox_perm_transmit_joystick_values.Size = new System.Drawing.Size(189, 17);
+            this.checkBox_perm_transmit_joystick_values.TabIndex = 38;
+            this.checkBox_perm_transmit_joystick_values.Text = "Передовать значение джостика";
+            this.checkBox_perm_transmit_joystick_values.UseVisualStyleBackColor = true;
+            // 
+            // textBox_telemetry_data
+            // 
+            this.textBox_telemetry_data.Location = new System.Drawing.Point(955, 121);
+            this.textBox_telemetry_data.Multiline = true;
+            this.textBox_telemetry_data.Name = "textBox_telemetry_data";
+            this.textBox_telemetry_data.Size = new System.Drawing.Size(341, 264);
+            this.textBox_telemetry_data.TabIndex = 39;
             // 
             // form_main
             // 
@@ -411,13 +634,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_state_ECU_connected)).EndInit();
             this.panel_central.ResumeLayout(false);
             this.panel_central.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet_transmit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_hydraulic_oil_temp_level)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_rpm_meter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cooltant_temp_level)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fuel_level)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_joystick_position_left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_joystick_position_right)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_packet_recive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_update_panel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_interval_req_telemetry)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,9 +680,29 @@
         private System.Windows.Forms.PictureBox pictureBox_cooltant_temp_level;
         private System.Windows.Forms.PictureBox pictureBox_rpm_meter;
         private System.Windows.Forms.PictureBox pictureBox_hydraulic_oil_temp_level;
-        private System.Windows.Forms.Label label_info_interval_packet;
-        private System.Windows.Forms.NumericUpDown numericUpDown_interval_packet;
+        private System.Windows.Forms.Label label_info_interval_packet_transmit;
+        private System.Windows.Forms.NumericUpDown numericUpDown_interval_packet_transmit;
         private System.Windows.Forms.CheckBox checkBox_cmd_microphone;
+        private System.Windows.Forms.CheckBox checkBox_cmd_wipers;
+        private System.Windows.Forms.CheckBox checkBox_cmd_rear_light;
+        private System.Windows.Forms.CheckBox checkBox_cmd_head_light;
+        private System.Windows.Forms.Button button_cmd_right_turn_signal;
+        private System.Windows.Forms.Button button_cmd_left_turn_signal;
+        private System.Windows.Forms.CheckBox checkBox_cmd_hazard_light;
+        private System.Windows.Forms.Button button_cmd_horn;
+        private System.Windows.Forms.Button button_cmd_brake;
+        private System.Windows.Forms.CheckBox checkBox_cmd_brake_parking;
+        private System.Windows.Forms.CheckBox checkBox_cmd_ignition;
+        private System.Windows.Forms.Button button_cmd_stop_engine;
+        private System.Windows.Forms.Button button_cmd_start_engine;
+        private System.Windows.Forms.Label label_info_interval_packet_recive;
+        private System.Windows.Forms.NumericUpDown numericUpDown_interval_packet_recive;
+        private System.Windows.Forms.Label label_info_interval_update_panel;
+        private System.Windows.Forms.NumericUpDown numericUpDown_interval_update_panel;
+        private System.Windows.Forms.Label label_info_interval_req_telemetry;
+        private System.Windows.Forms.NumericUpDown numericUpDown_interval_req_telemetry;
+        private System.Windows.Forms.CheckBox checkBox_perm_transmit_joystick_values;
+        private System.Windows.Forms.TextBox textBox_telemetry_data;
     }
 }
 

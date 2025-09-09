@@ -62,12 +62,48 @@ namespace RemoteLoaderControl.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int interval_packet {
+        public int interval_packet_transmit {
             get {
-                return ((int)(this["interval_packet"]));
+                return ((int)(this["interval_packet_transmit"]));
             }
             set {
-                this["interval_packet"] = value;
+                this["interval_packet_transmit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int interval_packet_recive {
+            get {
+                return ((int)(this["interval_packet_recive"]));
+            }
+            set {
+                this["interval_packet_recive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public int interval_update_panel {
+            get {
+                return ((int)(this["interval_update_panel"]));
+            }
+            set {
+                this["interval_update_panel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public int interval_req_telemetry {
+            get {
+                return ((int)(this["interval_req_telemetry"]));
+            }
+            set {
+                this["interval_req_telemetry"] = value;
             }
         }
     }
