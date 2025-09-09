@@ -58,5 +58,17 @@ namespace RemoteLoaderControl.Properties {
                 this["com_port_baudrate"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int interval_packet {
+            get {
+                return ((int)(this["interval_packet"]));
+            }
+            set {
+                this["interval_packet"] = value;
+            }
+        }
     }
 }
