@@ -49,61 +49,61 @@ namespace RemoteLoaderControl.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("115200")]
-        public int com_port_baudrate {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int com_port_baudrate_select_index {
             get {
-                return ((int)(this["com_port_baudrate"]));
+                return ((int)(this["com_port_baudrate_select_index"]));
             }
             set {
-                this["com_port_baudrate"] = value;
+                this["com_port_baudrate_select_index"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int interval_packet_transmit {
+        public int interval_packet_transmit_tcp {
             get {
-                return ((int)(this["interval_packet_transmit"]));
+                return ((int)(this["interval_packet_transmit_tcp"]));
             }
             set {
-                this["interval_packet_transmit"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int interval_packet_recive {
-            get {
-                return ((int)(this["interval_packet_recive"]));
-            }
-            set {
-                this["interval_packet_recive"] = value;
+                this["interval_packet_transmit_tcp"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("200")]
-        public int interval_update_panel {
+        public int interval_packet_req_tcp {
             get {
-                return ((int)(this["interval_update_panel"]));
+                return ((int)(this["interval_packet_req_tcp"]));
             }
             set {
-                this["interval_update_panel"] = value;
+                this["interval_packet_req_tcp"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("200")]
-        public int interval_req_telemetry {
+        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        public int interval_packet_req_com_port {
             get {
-                return ((int)(this["interval_req_telemetry"]));
+                return ((int)(this["interval_packet_req_com_port"]));
             }
             set {
-                this["interval_req_telemetry"] = value;
+                this["interval_packet_req_com_port"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string com_port_uuid_dev {
+            get {
+                return ((string)(this["com_port_uuid_dev"]));
+            }
+            set {
+                this["com_port_uuid_dev"] = value;
             }
         }
     }
